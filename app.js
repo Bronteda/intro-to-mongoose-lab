@@ -11,7 +11,7 @@ const connect = async () => {
         await mongoose.connect(process.env.MONGODB_URI);
         console.log('Connected to MongoDB');
     } catch (error) {
-        console.error('❌ Failed to connect to MongoDB', err);
+        console.error('Failed to connect to MongoDB', err);
         process.exit(1);
     }
 };
@@ -77,7 +77,6 @@ const deleteCustomer = async () => {
     } else {
         console.log("Customer not found.");
     }
-
 };
 
 
